@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameRoll : MonoBehaviour {
 	public GameObject cylinder;
+	public bool isRoll;
 
 	// Use this for initialization
 	void Start () {
@@ -11,8 +12,11 @@ public class GameRoll : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		var rotation = cylinder.transform.rotation;
-		rotation *= Quaternion.Euler(0, -120 * Time.deltaTime, 0);
-		cylinder.transform.rotation = rotation;
+		if (isRoll)
+		{
+			var rotation = cylinder.transform.rotation;
+			rotation *= Quaternion.Euler(0, -120 * Time.deltaTime, 0);
+			cylinder.transform.rotation = rotation;
+		}
 	}
 }

@@ -22,5 +22,7 @@
 # Unity3D Generated File On Crash Reports
 sysinfo.txt
 
+App/
+
 # Import Assets
-#Assets/.../
+Assets/DAX/
